@@ -18,9 +18,14 @@ import gzip
 import sys
 import os
 import pickle
-from sagemaker import Session
-from sagemaker.amazon import pca
-from sagemaker.sklearn.processing import SKLearnProcessor
+
+try:
+    from sagemaker import Session
+    from sagemaker.amazon import pca
+    from sagemaker.sklearn.processing import SKLearnProcessor
+except ImportError:
+    pass
+
 from stepfunctions.steps.utils import get_aws_partition
 from tests.integ import DATA_DIR
 

@@ -16,7 +16,7 @@ import logging
 import pkg_resources
 import sys
 
-__version__ = pkg_resources.require("stepfunctions")[0].version
+__version__ = ""# pkg_resources.require("stepfunctions")[0].version
 __useragent__ = "aws-step-functions-data-science-sdk-python"
 
 # disable logging.warning() from import packages
@@ -24,7 +24,6 @@ logging.getLogger().setLevel(logging.ERROR)
 
 from stepfunctions import steps
 from stepfunctions import workflow
-from stepfunctions import template
 from stepfunctions.workflow.utils import CustomColorFormatter
 
 def set_stream_logger(level=logging.INFO):

@@ -12,12 +12,7 @@
 # permissions and limitations under the License.
 from __future__ import absolute_import
 
-from sagemaker.utils import base_name_from_image
-from sagemaker.sklearn.estimator import SKLearn
-from sagemaker.model import Model
-from sagemaker.pipeline import PipelineModel
-
-from stepfunctions.steps import TrainingStep, TransformStep, ModelStep, EndpointConfigStep, EndpointStep, Chain, Fail, Catch
+from stepfunctions.steps import Chain, Fail, Catch
 from stepfunctions.workflow import Workflow
 from stepfunctions.template.pipeline.common import StepId, WorkflowTemplate
 

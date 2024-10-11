@@ -30,7 +30,6 @@ def read_version():
 
 # Declare minimal set for installation
 required_packages = [
-    "sagemaker>=2.1.0",
     "boto3>=1.14.38",
     "pyyaml"
 ]
@@ -60,12 +59,14 @@ setup(
     ],
     install_requires=required_packages,
     extras_require={
+        "sagemaker": [
+            "sagemaker>=2.1.0"
+        ],
         "test": [
             "tox>=3.13.1",
             "pytest>=4.4.1",
             "stopit==1.1.2",
             "tensorflow>=1.3.0",
-            "mock>=2.0.0",
             "contextlib2==0.5.5",
             "IPython",
         ]

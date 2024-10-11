@@ -13,11 +13,10 @@
 from __future__ import absolute_import
 
 import pytest
-from mock import MagicMock
+from unittest.mock import MagicMock
 
-from datetime import datetime
 
-from stepfunctions.inputs import ExecutionInput, StepInput
+from stepfunctions.inputs import ExecutionInput
 from stepfunctions.steps import Pass, Chain
 from stepfunctions.workflow import Workflow
 
