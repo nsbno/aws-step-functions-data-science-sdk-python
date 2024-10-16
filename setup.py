@@ -39,7 +39,7 @@ if sys.version_info < (3, 4):
     required_packages.append("enum34>=1.1.6")
 
 setup(
-    name="stepfunctions",
+    name="stepfunctions-without-sagemaker",
     version=read_version(),
     description="Open source library for developing data science workflows on AWS Step Functions.",
     packages=find_packages("src"),
@@ -47,7 +47,7 @@ setup(
     py_modules=[os.path.splitext(os.path.basename(path))[0] for path in glob("src/*.py")],
     long_description=read("README.rst"),
     author="Amazon Web Services",
-    url="https://github.com/aws/aws-step-functions-data-science-sdk-python",
+    url="https://github.com/nsbno/aws-step-functions-data-science-sdk-python",
     license="Apache License 2.0",
     keywords="ML Amazon AWS AI Tensorflow MXNet",
     classifiers=[
